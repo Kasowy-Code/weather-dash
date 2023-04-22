@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+body {
+    font-family: "poppins";
+    margin: 0;
+}
+.Toast {
+    background-color: #f8d7da;
+    padding: 1rem;
+    color: #970b19;
+    font-weight: 900;
+    border: 2px solid #f1aeb5;
+    border-radius: 5px;
+    position: fixed;
+    top: 2rem;
+    left: 5rem;
+}
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.WeatherTile {
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    transition-duration: 300ms;
+}
+.WeatherTile:hover {
+    transition-duration: 300ms;
+    background-color: #ffffff;
+    box-shadow: 6px 6px 15px #aaaaaa;
+
+}
+.TilesContainer {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+.infoContainer > h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+.bi {
+    color: #265eee;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description {
+    color: #555;
+    font-size: 1.2rem;
+}
+.right {
+    min-height: 100vh;
+    padding: 2rem;
+    background: rgb(0,127,255);
+    background: linear-gradient(315deg, #193150 0%, #1a4cb0 100%); 
+}
+.left {
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.navbar {
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #f3f3f3;
+}
+.citySearch input {
+    height: 3rem;
+    width: 30rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    background-color: #f3f3f3;
+    color: #555555;
+}
+span.textbox {
+    background-color: #f3f3f3;
+    line-height: 3rem;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    
+}
+
+span.textbox input {
+  color: #555555;
+  border: 0px;
+  position: relative;
+  top: -0.5rem;
+  height: 2rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  background-color: #f3f3f3;
+  outline: none;
+}
+
+#searchIcon {
+    color: #555555;
+    font-size: 1.5rem;
+}
+
+#navMonth {
+    font-weight: 900;
+    color: black;
+    margin: 0;
+}
+#navDate {
+    margin: 0;
+    color: #555555;
+}
+
+#basicInfoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(200,200,200,0.5);
+    margin-bottom: 3rem;
+}
+#weatherDescription, #temperatureInfo {
+    color: white;
+    display: block;
+    text-transform: capitalize;
+}
+#temperatureInfo {
+    font-size: 3rem;
+    margin: 0.5rem;
+}
+#weatherDescription {
+    text-align: center;
+    width: 10ch;
+}
+#topRightBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+#weatherForecastContainer {
+    display: flex;
+    position: relative;
+    gap: 2rem;
+    max-width: 80rem;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+.weatherForecastTile {    
+    border-radius: 5px;
+    border: 2px solid #f3f3f3;
+    height: 20rem;
+    padding: 0.8rem;
+}
+.weatherInfo {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weatherInfo > h2, h3, h4 {
+    margin: 0.4rem;
+}
+.weatherInfo > h4 {
+    color: #555555;
+    margin: 0.2rem;
+}
+.accent {
+    color: #265eee;
+}
+
+.rightText {
+    color: white;
+}
+.percipitationBarContainer {
+    width: 15rem;
+    height: 3rem;
+    border-radius: 5rem;
+    background-color: #294262;
+
+}
+.percipitationBar {
+    height: 100%;
+    border-radius: 5rem;
+    background-color: #8cb2fb;
+    /* width: 10rem; */
+}
+.percipitationElement {
+    display: flex;
+    flex-direction: row;
+    margin-block: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+.percipitationElement > span {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+#percipitationContainer {
+    margin-bottom: 3rem;
+}
+.precipitationTime {
+    width: 4rem;
+}
+.sunTimeTile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #8cb2fba0;
+    border-radius: 5px;
+    height: 7rem;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #2b4879;
+    margin-block: 1rem;
+}
+.sunEvent {
+    font-size: 1rem;
+    color: #7f8fa6
+}
+.sunTileInfo {
+    display: flex;
+    flex-direction: row;
+}
